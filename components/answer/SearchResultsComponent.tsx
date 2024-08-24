@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 
 // 2. Define the 'SearchResult' interface with properties for 'favicon', 'link', and 'title'
 export interface SearchResult {
-    favicon: string;
     link: string;
     title: string;
 }
@@ -19,10 +18,10 @@ const SearchResultsComponent = ({ searchResults }: { searchResults: SearchResult
     const [isExpanded, setIsExpanded] = useState(false);
     const [loadedFavicons, setLoadedFavicons] = useState<boolean[]>([]);
 
-    // 6. Use the 'useEffect' hook to initialize the 'loadedFavicons' state based on the 'searchResults' length
-    useEffect(() => {
-        setLoadedFavicons(Array(searchResults.length).fill(false));
-    }, [searchResults]);
+    // // 6. Use the 'useEffect' hook to initialize the 'loadedFavicons' state based on the 'searchResults' length
+    // useEffect(() => {
+    //     setLoadedFavicons(Array(searchResults.length).fill(false));
+    // }, [searchResults]);
 
     // 7. Define the 'toggleExpansion' function to toggle the 'isExpanded' state
     const toggleExpansion = () => setIsExpanded(!isExpanded);
@@ -69,7 +68,7 @@ const SearchResultsComponent = ({ searchResults }: { searchResults: SearchResult
                     visibleResults.map((result, index) => (
                         <div key={index} className="p-2 w-full sm:w-1/2 md:w-1/4">
                             <div className="flex items-center space-x-2 bg-gray-100 p-3 rounded-lg h-full">
-                                {!loadedFavicons[index] && (
+                                {/* {!loadedFavicons[index] && (
                                     <div className="w-5 h-5 bg-gray-200 rounded animate-pulse"></div>
                                 )}
                                 <img
@@ -77,7 +76,7 @@ const SearchResultsComponent = ({ searchResults }: { searchResults: SearchResult
                                     alt="favicon"
                                     className={`w-5 h-5 ${loadedFavicons[index] ? 'block' : 'hidden'}`}
                                     onLoad={() => handleFaviconLoad(index)}
-                                />
+                                /> */}
                                 <a href={result.link} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold truncate">
                                     {result.title}
                                 </a>
@@ -93,9 +92,9 @@ const SearchResultsComponent = ({ searchResults }: { searchResults: SearchResult
                     >
                         {!isExpanded ? (
                             <>
-                                {searchResults.slice(3).map((result, index) => (
+                                {/* {searchResults.slice(3).map((result, index) => (
                                     <img key={index} src={result.favicon} alt="favicon" className="w-4 h-4" />
-                                ))}
+                                ))} */}
                                 <span className="text-xs font-semibold">View more</span>
                             </>
                         ) : (
