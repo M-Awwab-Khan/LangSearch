@@ -1,6 +1,4 @@
-# Perplexity-Inspired LLM Answer Engine
-
-[Watch the tutorial here](https://youtu.be/kFC-OWw7G8k) for a detailed guide on setting up and running this project.
+# LangSearch, An AI Search Engine
 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmJ0ZnhmNjkwYzczZDlqZzM1dDRka2k1MGx6dW02ZHl5dzV0aGQwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mluzeYSMGoAnSXg0ft/giphy.gif)
 
@@ -83,25 +81,8 @@ More info: https://ollama.com/blog/openai-compatibility
 
 ### Backend + Node Only Express API
 
-![Build a Perplexity-Inspired Answer Engine Using Groq, Mixtral, Langchain, Brave & OpenAI in 10 Min](https://img.youtube.com/vi/43ZCeBTcsS8/0.jpg)
-
 In addition to the Next.JS version of the project, there is a backend only version that uses Node.js and Express. Which is located in the 'original-express-api' directory. This is a standalone version of the project that can be used as a reference for building a similar API. There is also a readme file in the 'original-express-api' directory that explains how to run the backend version.
-
-[Watch the express tutorial here](https://youtu.be/43ZCeBTcsS8) for a detailed guide on setting up and running this project. 
 
 ## Contributing
 
 Contributions to the project are welcome. Feel free to fork the repository, make your changes, and submit a pull request. You can also open issues to suggest improvements or report bugs.
-
-
-## License
-
-This project is licensed under the MIT License.
-
-I'm the developer behind Developers Digest. If you find my work helpful or enjoy what I do, consider supporting me. Here are a few ways you can do that:
-
-- **Patreon**: Support me on Patreon at [patreon.com/DevelopersDigest](https://www.patreon.com/DevelopersDigest)
-- **Buy Me A Coffee**: You can buy me a coffee at [buymeacoffee.com/developersdigest](https://www.buymeacoffee.com/developersdigest)
-- **Website**: Check out my website at [developersdigest.tech](https://developersdigest.tech)
-- **Github**: Follow me on GitHub at [github.com/developersdigest](https://github.com/developersdigest)
-- **Twitter**: Follow me on Twitter at [twitter.com/dev__digest](https://twitter.com/dev__digest)
