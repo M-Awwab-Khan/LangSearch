@@ -3,12 +3,8 @@ import 'server-only';
 import { createAI, createStreamableValue } from 'ai/rsc';
 import { OpenAI } from 'openai';
 import * as cheerio from 'cheerio';
-
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
-// import { OpenAIEmbeddings } from '@langchain/openai';
 import { GoogleGenerativeAIEmbeddings } from '@langchain/google-genai'
-import { TaskType } from "@google/generative-ai";
-
 import { MemoryVectorStore } from 'langchain/vectorstores/memory';
 import { Document as DocumentInterface } from 'langchain/document';
 
@@ -117,7 +113,7 @@ async function processAndVectorizeContent(
     numberOfSimilarityResults = 4
 ): Promise<DocumentInterface[]> {
     try {
-        const embeddings = new GoogleGenerativeAIEmbeddings({ apiKey: "AIzaSyDeY5mj-bmzj3ONfXw7qf1QejjNJW6QwW4", modelName: 'embedding-001' });
+        const embeddings = new GoogleGenerativeAIEmbeddings({ apiKey: process.env.GOOGLE_API_KEY, modelName: 'embedding-001' });
         for (let i = 0; i < contents.length; i++) {
             const content = contents[i];
             if (content.html.length > 0) {
@@ -237,7 +233,7 @@ const relevantQuestions = async (sources: SearchResult[]): Promise<any> => {
         messages:
             [{
                 role: "system", content: `
-        You are a Question generate who generates in JSON an array of 3 follow up questions.
+        You are a Question generator who generates in JSON an array of 3 follow up questions.
          The JSON schema should include {
           "followUp": [
             "Question 1",
